@@ -1,8 +1,8 @@
 
 import React, { useState, useEffect } from "react";
 import './../styles/App.css';
+import List from "./List";
 
-const App = () => {
     const cityList = [{ name: 'Goa', country: 'India' },
     { name: 'Amsterdam', country: 'Netherlands' },
     { name: 'New York', country: 'USA' },
@@ -32,10 +32,12 @@ const App = () => {
     { name: 'Mount Abu', country: 'India' },
     { name: 'Tirupati', country: 'India' },
     ]
-    
+    let city=cityList.filter(val => val.country=="India");
+ 
+const App = () => {
   return (
     <div id="main">
-               {/* Do not remove the main div */}
+              <List data={city}/>
     </div>
   )
 }
